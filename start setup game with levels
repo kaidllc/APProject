@@ -1,6 +1,7 @@
 import pygame
 from pygame.locals import *
 from classes import Ball, Wall
+import Levels
 
 # Initialise screen
 
@@ -51,8 +52,9 @@ def main():
         current_level.update()
         
         # If the player hits the goal, go to the next level
-        #PUT IF-STATEMENT: if ball hits target:
-            player.rect.x = 120
+        distance = math.hypot(ball.pos.x-self.pos.x,ball.pos.y-self.pos.y)#Roy: I added this line so it updates the distance everytime we move the ball
+        if distance <= (ball.r+self.r): #Roy: This is the if-statement that checks for collision, e.g. if the ball hits the target
+            self.color =  (0,0,255)
             if current_level_no < len(level_list)-1:
                 current_level_no += 1
                 current_level = level_list[current_level_no]

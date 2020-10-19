@@ -77,6 +77,10 @@ class Ball:
                 elif x + self.r > left and x - self.r < right and y > centery and y - self.r <= bottom:
                     self.pos.y = bottom + self.r
                     self.vel.y *= -1
+                    
+    def reset_position(self):
+        # function here to reset position after level is completed? or should this be in the level class itself?
+             
 
 class Wall:
     def __init__(self, surface, x, y, orientation, length, thick=10, color=(255, 100, 0)):

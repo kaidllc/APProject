@@ -39,13 +39,11 @@ class Level_01(Level):
         
         # Go through the array above and add platforms
         for wall in walls:
-            #example below
-            block = platforms.Platform(platform[0])
-            block.rect.x = platform[1]
-            block.rect.y = platform[2]
-            block.player = self.player
-            self.platform_list.add(block)
-            
+           #not sure if this will work yet
+           block = platforms.Platform(platform[0])
+           block.rect.x = platform[1]
+           block.rect.y = platform[2]
+           self.wall_list.add(block)
             
             
 class Level_02(Level):
@@ -66,9 +64,8 @@ class Level_02(Level):
         
         # Go through the array above and add platforms
         for wall in walls:
-            #example below
-            block = platforms.Platform(platform[0])
-            block.rect.x = platform[1]
-            block.rect.y = platform[2]
-            block.player = self.player
-            self.platform_list.add(block)
+           #not sure if this will work yet
+           block = platforms.Platform(platform[0])
+           block.rect.x = platform[1]
+           block.rect.y = platform[2]
+           self.wall_list.add(block)
